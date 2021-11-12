@@ -27,7 +27,7 @@ h1, h3 {
 	height: 100vh;
 }
 
-button{
+button {
 	
 }
 </style>
@@ -49,17 +49,13 @@ button{
 						</div>
 						<div class="form-floating">
 							<input type="email" class="form-control" id="email"
-								placeholder="name@example.com" required>
-							<div class="invalid-feedback" style="text-align: left">Invalid
-								Email</div>
-							<label for="floatingInput">Email</label>
+								placeholder="name@example.com" required> <label
+								for="floatingInput">Email</label>
 						</div>
 						<div class="form-floating">
 							<input type="password" class="form-control mt-2" id="password"
-								placeholder="Password" required>
-							<div class="invalid-feedback" style="text-align: left">Invalid
-								Password</div>
-							<label for="floatingPassword">Password</label>
+								placeholder="Password" required> <label
+								for="floatingPassword">Password</label>
 						</div>
 
 						<div class="checkbox mb-3">

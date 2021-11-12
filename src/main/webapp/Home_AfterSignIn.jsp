@@ -173,6 +173,15 @@ span {
 							src="./images/feedback.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Feedback</a></li>
 				</ul>
 
+				<!-- applied after login -->
+
+				<hr>
+				<ul class="nav nav-pills flex-column mb-auto">
+					<li class="nav-item"><a href="./Channel.jsp"
+						class="nav-link text-white"><img src="./images/channel.png"
+							width="25" height="25">&nbsp;&nbsp;&nbsp;My channel</a></li>
+				</ul>
+
 			</div>
 
 
@@ -596,7 +605,6 @@ span {
 								</div>
 							</div>
 						</div>
-
 
 					</div>
 				</div>
