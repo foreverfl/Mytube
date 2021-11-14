@@ -133,8 +133,30 @@ span {
 							class="dropdown-item" href="#">Japanese</a> <a
 							class="dropdown-item" href="#">Korean</a>
 					</div></li>
-				<li class="nav-item"><a href="./SignIn.jsp" class="nav-link"
-					style="border: 1px solid white; padding: 5px; margin: 2px">Login</a></li>
+
+				<li class="nav-item dropstart"><a class="nav-link" href="#"
+					id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"><img
+						src="./images/profile_2.png" width="30" class="rounded-circle"></a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<div class="row">
+							<div class="col-2">
+								<div class="d-flex align-self-center">
+									<a><img src="./images/profile_2.png" width="30"
+										class="rounded-circle "></a>
+								</div>
+							</div>
+							<div class="col-10">
+								<a class="dropdown-item" href="#">ID</a> <a
+									class="dropdown-item text-primary" href="#"
+									style="font-size: 8px;">Manage your Account</a>
+							</div>
+						</div>
+
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Sign out</a>
+					</div></li>
+				</li>
 			</ul>
 		</div>
 

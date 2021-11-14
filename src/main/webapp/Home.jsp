@@ -134,7 +134,7 @@ span {
 							class="dropdown-item" href="#">Korean</a>
 					</div></li>
 				<li class="nav-item"><a href="./SignIn.jsp" class="nav-link"
-					style="border: 1px solid white; padding: 5px; margin: 2px">Login</a></li>
+					style="border: 1px solid white; padding: 5px; margin: 2px">Sign in</a></li>
 			</ul>
 		</div>
 
