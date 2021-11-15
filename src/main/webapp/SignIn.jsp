@@ -39,52 +39,51 @@ button {
 	<div class="container">
 		<div class="row d-flex justify-content-center align-items-center">
 			<div class="col">
-				<main class="form-signin">
-					<form class="needs-validation" novalidate style="width: 300px;">
-						<div id="sign_in">
-							<img class="mb-0" src="./images/logo.png" alt="" width="72"
-								height="57">
-							<h1 class="h1 fw-bold">Sign in</h1>
-							<h3>to continue to MyTube</h3>
-						</div>
-						<div class="form-floating">
-							<input type="email" class="form-control" id="email"
-								placeholder="name@example.com" required> <label
-								for="floatingInput">Email</label>
-						</div>
-						<div class="form-floating">
-							<input type="password" class="form-control mt-2" id="password"
-								placeholder="Password" required> <label
-								for="floatingPassword">Password</label>
-						</div>
 
-						<div class="checkbox mb-3">
-							<label> <input type="checkbox" value="remember-me">
-								Remember me
-							</label>
-						</div>
+				<form class="form-signin" method="post" novalidate
+					style="width: 300px;">
+					<div id="sign_in">
+						<img class="mb-0" src="./images/logo.png" alt="" width="72"
+							height="57">
+						<h1 class="h1 fw-bold">Sign in</h1>
+						<h3>to continue to MyTube</h3>
+					</div>
+					<div class="form-floating">
+						<input name="email" type="email" class="form-control" id="email"
+							placeholder="name@example.com" required> <label
+							for="floatingInput">Email</label>
+					</div>
+					<div class="form-floating">
+						<input name="password" type="password" class="form-control mt-2"
+							id="password" placeholder="Password" required> <label
+							for="floatingPassword">Password</label>
+					</div>
 
-						<!-- button -->
-						<div class="row justify-content-center">
-							<div class="col">
-								<button class="btn btn-lg btn-outline-primary"
-									onClick="location.href='./SignUp.jsp'">Sign up</button>
-							</div>
-							<div class="col">
-								<button class="btn btn-lg btn-primary" type="submit">Sign
-									in</button>
-							</div>
-						</div>
+					<div class="checkbox mb-3">
+						<label> <input type="checkbox" value="remember-me">
+							Remember me
+						</label>
+					</div>
 
-						<p class="mt-3 mb-3 text-muted">© 2021</p>
-					</form>
-				</main>
+					<!-- button -->
+					<div class="row justify-content-center">
+						<div class="col">
+							<input class="btn btn-lg btn-outline-primary" type="submit"
+								name="action" value="Sign Up" formaction="./SignUp.jsp" />
+						</div>
+						<div class="col">
+							<input class="btn btn-lg btn-primary" type="submit" name="action"
+								value="Sign In" formaction="./process_SignIn.jsp" />
+						</div>
+					</div>
+
+					<p class="mt-3 mb-3 text-muted">© 2021</p>
+				</form>
 			</div>
 		</div>
 	</div>
 
 	<!-- Optional JavaScript; choose one of the two! -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -48,18 +48,19 @@ footer {
 			</div>
 
 			<div class="col">
-				<form class="needs-validation" novalidate>
+				<form name="newMember" action="process_SignUp.jsp" method="post"
+					class="needs-validation" novalidate>
 					<div class="row g-3 justify-content-center">
 						<div class="col-2">
 							<label for="firstName" class="form-label">First name</label> <input
-								type="text" class="form-control" id="firstName"
+								name="firstName" type="text" class="form-control" id="firstName"
 								placeholder="Kaori" value="" required>
 							<div class="invalid-feedback">Invalid First name</div>
 						</div>
 
 						<div class="col-2">
 							<label for="lastName" class="form-label">Last name</label> <input
-								type="text" class="form-control" id="lastName"
+								name="lastName" type="text" class="form-control" id="lastName"
 								placeholder="Mochida" value="" required>
 							<div class="invalid-feedback">Invalid Last name</div>
 						</div>
@@ -67,7 +68,7 @@ footer {
 						<div class="row g-3 justify-content-center">
 							<div class="col-4">
 								<label for="email" class="form-label">Email </label> <input
-									type="email" class="form-control" id="email"
+									name="email" type="email" class="form-control" id="email"
 									placeholder="mytube@example.com" required>
 								<div class="invalid-feedback">Invalid Email</div>
 							</div>
@@ -82,8 +83,8 @@ footer {
 
 						<div class="col-2">
 							<label for="password" class="form-label">Password</label> <input
-								type="password" class="form-control" id="password"
-								placeholder="" value="" required>
+								name="password" type="password" class="form-control"
+								id="password" placeholder="" value="" required>
 							<div class="invalid-feedback">Invalid Password</div>
 						</div>
 

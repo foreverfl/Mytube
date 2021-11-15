@@ -38,12 +38,6 @@ hr {
 	font-size: 14px;
 }
 
-#left_nav {
-	background-color: #212121;
-	font-size: 25px;
-	font-family: 'Dongle', sans-serif;
-}
-
 #video_title {
 	background-color: #181818;
 }
@@ -86,95 +80,14 @@ span {
 </head>
 <body>
 	<!-- navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-gray border-bottom">
-		<!-- logo -->
-		a <a class="navbr-brand text-decoration-none" href="#" id="logo"><h3>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
-					src="./images/logo_gray.png" width="72" height="57">MyTube
-			</h3></a>
-
-		<!-- mobile button -->
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-			data-bs-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-			<!-- Search -->
-			<form class="d-flex mx-auto justify-content-center">
-				<input class="form-control me-2" type="search" placeholder="Search"
-					aria-label="Search" style="width: 500px; margin-left: 200px;">
-				<button class="btn btn-dark" type="submit">
-					<img src="./images/search_white.png" width="30">
-				</button>
-			</form>
-
-			<!-- Login -->
-			<ul class="navbar-nav ms-auto mb-2 mb-lg-0"
-				style="margin-right: 50px;">
-				<li class="nav-item dropdown"><a class="nav-link" href="#"
-					id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false"> <img
-						src="./images/dot_white.png" width="30"
-						style="margin-right: 20px;"></a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item disabled" href="#">Mode</a> <a
-							class="dropdown-item" href="#">Online</a> <a
-							class="dropdown-item" href="#">Offline</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item disabled" href="#">Design</a> <a
-							class="dropdown-item" href="#">Dark theme</a> <a
-							class="dropdown-item" href="#">Light theme</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item disabled" href="#">Language</a> <a
-							class="dropdown-item" href="#">English</a> <a
-							class="dropdown-item" href="#">Japanese</a> <a
-							class="dropdown-item" href="#">Korean</a>
-					</div></li>
-				<li class="nav-item"><a href="./SignIn.jsp" class="nav-link"
-					style="border: 1px solid white; padding: 5px; margin: 2px">Sign in</a></li>
-			</ul>
-		</div>
-
-
-	</nav>
+	<jsp:include page="Navigation.jsp" />
 
 	<!-- body -->
 	<div class="container-fluid">
 		<div class="row">
 			<!-- left part(menu) -->
-			<div class="col-2" id="left_nav">
-				<a href="#" class="text-white text-decoration-none text-center">
-					<span class="mt-4" style="font-size: 40px;">Online</span>
-				</a>
-				<hr>
-				<ul class="nav nav-pills flex-column mb-auto">
-					<li class="nav-item"><a href="#"
-						class="nav-link active bi me-2" aria-current="page"> <img
-							src="./images/home.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Home
-					</a></li>
-					<li><a href="#" class="nav-link text-white"><img
-							src="./images/recommend.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Recommended</a></li>
-					<li><a href="#" class="nav-link text-white"><img
-							src="./images/history.png" width="25" height="25">&nbsp;&nbsp;&nbsp;History</a></li>
-					<li><a href="#" class="nav-link text-white"><img
-							src="./images/favorite.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Favorite
-					</a></li>
-				</ul>
 
-				<hr>
-
-				<ul class="nav nav-pills flex-column mb-auto">
-					<li class="nav-item"><a href="#" class="nav-link text-white"><img
-							src="./images/address.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Address</a></li>
-					<li><a href="#" class="nav-link text-white"><img
-							src="./images/feedback.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Feedback</a></li>
-				</ul>
-
-			</div>
-
+			<jsp:include page="Navigation_Left.jsp" />
 
 			<!-- main part -->
 			<div class="col-10">
@@ -216,7 +129,7 @@ span {
 												is a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -250,7 +163,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -284,7 +197,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -318,7 +231,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -352,7 +265,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -386,7 +299,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -420,7 +333,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -454,7 +367,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -488,7 +401,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -522,7 +435,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -556,7 +469,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -590,7 +503,7 @@ span {
 												a video title.</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;channel</p>
 											<p class="card-text text-muted" style="font-size: 15px;">&nbsp;view
-												· upload date</p>
+												· uploaded date</p>
 										</div>
 									</div>
 								</div>
@@ -624,19 +537,5 @@ span {
 		</div>
 	</div>
 
-
-	<!-- Optional JavaScript; choose one of the two! -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="./js/bootstrap.min.js"></script>
-
-	<!-- Option 2: Separate Popper and Bootstrap JS -->
-	<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 </body>
 </html>
