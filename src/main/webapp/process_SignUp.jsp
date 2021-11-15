@@ -18,7 +18,7 @@ java.sql.Timestamp timestamp = new java.sql.Timestamp(currentDatetime.getTime())
 %>
 
 <sql:setDataSource var="dataSource"
-	url="jdbc:oracle:thin:@localhost:1521:xe"
+	url="jdbc:oracle:thin:@localhost:1521:orcl"
 	driver="oracle.jdbc.driver.OracleDriver" user="mytube"
 	password="mytube" />
 
@@ -30,6 +30,13 @@ java.sql.Timestamp timestamp = new java.sql.Timestamp(currentDatetime.getTime())
 	<sql:param value="<%=timestamp%>" />
 </sql:update>
 
-<c:if test="${resultSet>=1}">
+<sql:update dataSource="${dataSource}" var="resultSet">
+   CREATE TABLE ?_?(title varchar(50) not null, count varchar(10), upload_date varchar(10), thumbnail VARCHAR(200), video VARCHAR(200), primary key(title));	
+   <sql:param value="<%=firstName%>" />
+	<sql:param value="<%=lastName%>" />
+</sql:update>
+
+
+<c:if test="${resultSet>=2}">
 	<c:redirect url="SignUp_Complete.jsp" />
 </c:if>

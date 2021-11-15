@@ -20,7 +20,7 @@ java.sql.Timestamp timestamp = new java.sql.Timestamp(currentDatetime.getTime())
 %>
 
 <sql:setDataSource var="dataSource"
-	url="jdbc:oracle:thin:@localhost:1521:xe"
+	url="jdbc:oracle:thin:@localhost:1521:orcl"
 	driver="oracle.jdbc.driver.OracleDriver" user="mytube"
 	password="mytube" />
 

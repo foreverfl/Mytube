@@ -132,7 +132,6 @@ span {
 							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Videos&nbsp;&nbsp;</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Community&nbsp;&nbsp;</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;About&nbsp;&nbsp;</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Upload&nbsp;&nbsp;</a></li>
 							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;<img
 									src="./images/search_white_InChannel.png" width="20">&nbsp;&nbsp;
 							</a></li>

@@ -35,6 +35,33 @@ body {
 #channel_video_title {
 	background-color: #0f0f0f;
 }
+
+#channel_video_pagination {
+	background-color: #0f0f0f;
+}
+
+.pagination>li>a {
+	background-color: #212121;
+	color: white;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus,
+	.pagination>li>span:hover {
+	color: #5a5a5a;
+	background-color: #eee;
+	border-color: #ddd;
+}
+
+.pagination>.active>a {
+	color: white;
+	background-color: #5A4181 !Important;
+	border: solid 1px #5A4181 !Important;
+}
+
+.pagination>.active>a:hover {
+	background-color: #5A4181 !Important;
+	border: solid 1px #5A4181;
+}
 </style>
 </head>
 
@@ -276,6 +303,24 @@ body {
 			</div>
 		</div>
 	</div>
-		
+
+	<!-- pagination -->
+	<div class="row">
+		<div class="col" id="channel_video_pagination">
+			<ul class="pagination d-flex justify-content-center ">
+				<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item"><a class="page-link" href="#">6</a></li>
+				<li class="page-item"><a class="page-link" href="#">7</a></li>
+				<li class="page-item"><a class="page-link" href="#">8</a></li>
+				<li class="page-item"><a class="page-link" href="#">9</a></li>
+				<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
