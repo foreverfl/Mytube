@@ -69,11 +69,11 @@ button {
 					<div class="row justify-content-center">
 						<div class="col">
 							<input class="btn btn-lg btn-outline-primary" type="submit"
-								name="action" value="Sign Up" formaction="./SignUp.jsp" />
+								name="action" value="Sign Up" formaction="./SignUp.jsp" tabindex="2" />
 						</div>
 						<div class="col">
 							<input class="btn btn-lg btn-primary" type="submit" name="action"
-								value="Sign In" formaction="./process_SignIn.jsp" />
+								value="Sign In" formaction="./process_SignIn.jsp" tabindex="1" />
 						</div>
 					</div>
 

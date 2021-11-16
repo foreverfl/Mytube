@@ -3,7 +3,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
-String sessionEmail = (String) session.getAttribute("sessionEmail");
+String sessionId = (String) session.getAttribute("sessionId");
 %>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -59,7 +59,7 @@ span {
 <body>
 
 	<c:choose>
-		<c:when test="${ empty sessionEmail }">
+		<c:when test="${ empty sessionId }">
 			<!-- navbar -->
 			<nav
 				class="navbar navbar-expand-lg navbar-dark bg-gray border-bottom">
@@ -98,18 +98,22 @@ span {
 								style="margin-right: 20px;"></a>
 							<div class="dropdown-menu dropdown-menu-dark"
 								aria-labelledby="navbarDropdown">
-								<a class="dropdown-item disabled" href="#">Mode</a> <a
-									class="dropdown-item" href="#">Online</a> <a
-									class="dropdown-item" href="#">Offline</a>
+								<a class="dropdown-item disabled d-flex justify-content-center"
+									href="#">Mode</a> <a
+									class="dropdown-item d-flex justify-content-center" href="#">Online</a>
+								<a class="dropdown-item d-flex justify-content-center" href="#">Offline</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item disabled" href="#">Design</a> <a
-									class="dropdown-item" href="#">Dark theme</a> <a
-									class="dropdown-item" href="#">Light theme</a>
+								<a class="dropdown-item disabled d-flex justify-content-center"
+									href="#">Design</a> <a
+									class="dropdown-item d-flex justify-content-center" href="#">Dark
+									theme</a> <a class="dropdown-item d-flex justify-content-center"
+									href="#">Light theme</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item disabled" href="#">Language</a> <a
-									class="dropdown-item" href="#">English</a> <a
-									class="dropdown-item" href="#">Japanese</a> <a
-									class="dropdown-item" href="#">Korean</a>
+								<a class="dropdown-item disabled d-flex justify-content-center"
+									href="#">Language</a> <a
+									class="dropdown-item d-flex justify-content-center" href="#">English</a>
+								<a class="dropdown-item d-flex justify-content-center" href="#">Japanese</a>
+								<a class="dropdown-item d-flex justify-content-center" href="#">Korean</a>
 							</div></li>
 						<li class="nav-item"><a href="./SignIn.jsp" class="nav-link"
 							style="border: 1px solid white; padding: 5px; margin: 2px">Sign
@@ -159,18 +163,27 @@ span {
 								style="margin-right: 20px;"></a>
 							<div class="dropdown-menu dropdown-menu-dark"
 								aria-labelledby="navbarDropdown">
-								<a class="dropdown-item disabled" href="#">Mode</a> <a
-									class="dropdown-item" href="#">Online</a> <a
-									class="dropdown-item" href="#">Offline</a>
+								<a class="dropdown-item disabled d-flex justify-content-center"
+									href="#">Mode</a> <a
+									class="dropdown-item d-flex justify-content-center" href="#">Online</a>
+								<a class="dropdown-item d-flex justify-content-center" href="#">Offline</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item disabled" href="#">Design</a> <a
-									class="dropdown-item" href="#">Dark theme</a> <a
-									class="dropdown-item" href="#">Light theme</a>
+								<a class="dropdown-item disabled d-flex justify-content-center"
+									href="#">Design</a> <a
+									class="dropdown-item d-flex justify-content-center" href="#">Dark
+									theme</a> <a class="dropdown-item d-flex justify-content-center"
+									href="#">Light theme</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item disabled" href="#">Language</a> <a
-									class="dropdown-item" href="#">English</a> <a
-									class="dropdown-item" href="#">Japanese</a> <a
-									class="dropdown-item" href="#">Korean</a>
+								<a class="dropdown-item disabled d-flex justify-content-center"
+									href="#">Language</a> <a
+									class="dropdown-item d-flex justify-content-center" href="#">English</a>
+								<a class="dropdown-item d-flex justify-content-center" href="#">Japanese</a>
+								<a class="dropdown-item d-flex justify-content-center" href="#">Korean</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item d-flex justify-content-end"
+									href="Withdrawal.jsp"><button
+										class="btn btn-outline-danger">Withdrawal</button></a>
+
 							</div></li>
 
 						<li class="nav-item dropstart w-50"><a class="nav-link"
@@ -181,18 +194,22 @@ span {
 							<div class="dropdown-menu dropdown-menu-dark"
 								aria-labelledby="navbarDropdown">
 								<div class="row">
-									<div class="col-2">
-										<a><img src="./images/profile_2.png" width="30"
-											class="rounded-circle d-block"></a>
+									<div class="col-4 align-self-center">
+										<img class="rounded-circle mx-auto d-block"
+											src="./images/profile_2.png" width="50" height="50">
 									</div>
-									<div class="col-10">
-										<a class="dropdown-item" href="./Channel.jsp"><%=sessionEmail%></a>
-										<a class="dropdown-item text-primary" href="#"
-											style="font-size: 8px;">Manage your Account</a>
+									<div class="col-8">
+										<div class="align-self-center">
+											<a class="dropdown-item d-flex justify-content-center"
+												href="./Channel.jsp"><%=sessionId%></a> <a
+												class="dropdown-item text-primary d-flex justify-content-center"
+												href="#" style="font-size: 8px;">Manage your Account</a>
+										</div>
 									</div>
 								</div>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="SignOut.jsp">Sign out</a>
+								<a class="dropdown-item d-flex justify-content-center"
+									href="SignOut.jsp">Sign out</a>
 							</div></li>
 					</ul>
 				</div>

@@ -54,7 +54,7 @@ hr {
 		</a>
 		<hr>
 		<ul class="nav nav-pills flex-column mb-auto">
-			<li><a href="#" class="nav-link text-white"> <img
+			<li><a href="./Home.jsp" class="nav-link text-white"> <img
 					src="./images/home.png" width="25" height="25">&nbsp;&nbsp;&nbsp;Home
 			</a></li>
 			<li><a href="#" class="nav-link text-white"><img

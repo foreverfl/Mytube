@@ -40,6 +40,10 @@ body {
 	background-color: #0f0f0f;
 }
 
+.dropdown-menu {
+	min-width: 300px;
+}
+
 .pagination>li>a {
 	background-color: #212121;
 	color: white;
@@ -79,7 +83,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -107,7 +111,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -135,7 +139,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -163,7 +167,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -191,7 +195,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -219,7 +223,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -247,7 +251,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -275,7 +279,7 @@ body {
 						<div class="card border-0">
 
 							<!-- video -->
-							<a href="http://www.google.com"><svg
+							<a href="./Player.jsp"><svg
 									class="bd-placeholder-img card-img-top" width="100%"
 									height="225" role="img" aria-label="Placeholder: Thumbnail"
 									preserveAspectRatio="xMidYMid slice" focusable="false">

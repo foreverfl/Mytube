@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -119,24 +120,88 @@ span {
 									class="rounded-circle">
 							</div>
 
-							<div class="col-10 my-auto">
+							<div class="col-8 my-auto">
 								<p style="color: white; font-size: 20px;">Channel
 								<p class="text-secondary">Subscribers
 							</div>
+
+							<div class="col-2 my-auto d-flex flex-row-reverse">
+								<button class="btn btn-danger">Subscribe</button>
+							</div>
+
 						</div>
 
 						<!-- channel menu -->
-						<ul class="nav nav-pills mt-2" style="font-size: 15px;">
-							<li class="nav-item"><a class="nav-link active"
-								aria-current="page" href="#">&nbsp;&nbsp;Home&nbsp;&nbsp;</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Videos&nbsp;&nbsp;</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Community&nbsp;&nbsp;</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;About&nbsp;&nbsp;</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;<img
-									src="./images/search_white_InChannel.png" width="20">&nbsp;&nbsp;
-							</a></li>
-						</ul>
+						<%
+						
+						String sessionId = (String) session.getAttribute("sessionId");
+						// connection
+																		
+						Connection conn = null;
 
+						try {
+							String url = "jdbc:oracle:thin:@localhost:1521:xe";
+							String user = "mytube";
+							String password = "mytube";
+
+							Class.forName("oracle.jdbc.driver.OracleDriver");
+							conn = DriverManager.getConnection(url, user, password);
+
+						} catch (SQLException e) {
+							out.println("데이터베이스 연결이 실패했습니다.<br>");
+							out.println("SQLException: " + e.getMessage());
+						}
+
+						ResultSet rs = null;
+						PreparedStatement pstmt = null;
+
+						try {
+							String sql = "select table_name from tabs";
+							pstmt = conn.prepareStatement(sql);
+							rs = pstmt.executeQuery();
+
+							if (rs.next()) {
+								if (sessionId.equals()) {
+							sql = "update member_study set name = ? where id = ?";
+							pstmt = conn.prepareStatement(sql);
+							pstmt.setString(1, name);
+							pstmt.setString(2, id);
+							pstmt.executeUpdate();
+							out.println("member_study 테이블을 수정했습니다.");
+								} else
+							out.println("일치하는 비밀번호가 아닙니다.");
+							} else
+								out.println("member_study 테이블에 일치하는 아이디가 없습니다.");
+						} catch (SQLException ex) {
+							out.println("SQLExceptino: " + ex.getMessage());
+						} finally {
+							if (rs != null)
+								rs.close();
+							if (pstmt != null)
+								pstmt.close();
+							if (conn != null)
+								conn.close();
+						}
+						%>
+
+						<div class="row">
+							<div class="col-10">
+								<ul class="nav nav-pills mt-2" style="font-size: 15px;">
+									<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Home&nbsp;&nbsp;</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Videos&nbsp;&nbsp;</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;Community&nbsp;&nbsp;</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;About&nbsp;&nbsp;</a></li>
+									<li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;<img
+											src="./images/search_white_InChannel.png" width="20">&nbsp;&nbsp;
+									</a></li>
+								</ul>
+							</div>
+							<div class="col-2 d-flex flex-row-reverse">
+								<a class="btn btn-dark" href="#" role="button">Create
+									Channel</a>
+							</div>
+
+						</div>
 					</div>
 				</div>
 

@@ -67,6 +67,15 @@ footer {
 
 						<div class="row g-3 justify-content-center">
 							<div class="col-4">
+								<label for="id" class="form-label">ID</label> <input
+									name="id" type="text" class="form-control" id="id"
+									placeholder="ELTV" required>
+								<div class="invalid-feedback">Invalid ID</div>
+							</div>
+						</div>
+
+						<div class="row g-3 justify-content-center">
+							<div class="col-4">
 								<label for="email" class="form-label">Email </label> <input
 									name="email" type="email" class="form-control" id="email"
 									placeholder="mytube@example.com" required>
