@@ -132,58 +132,6 @@ span {
 						</div>
 
 						<!-- channel menu -->
-						<%
-						
-						String sessionId = (String) session.getAttribute("sessionId");
-						// connection
-																		
-						Connection conn = null;
-
-						try {
-							String url = "jdbc:oracle:thin:@localhost:1521:xe";
-							String user = "mytube";
-							String password = "mytube";
-
-							Class.forName("oracle.jdbc.driver.OracleDriver");
-							conn = DriverManager.getConnection(url, user, password);
-
-						} catch (SQLException e) {
-							out.println("데이터베이스 연결이 실패했습니다.<br>");
-							out.println("SQLException: " + e.getMessage());
-						}
-
-						ResultSet rs = null;
-						PreparedStatement pstmt = null;
-
-						try {
-							String sql = "select table_name from tabs";
-							pstmt = conn.prepareStatement(sql);
-							rs = pstmt.executeQuery();
-
-							if (rs.next()) {
-								if (sessionId.equals()) {
-							sql = "update member_study set name = ? where id = ?";
-							pstmt = conn.prepareStatement(sql);
-							pstmt.setString(1, name);
-							pstmt.setString(2, id);
-							pstmt.executeUpdate();
-							out.println("member_study 테이블을 수정했습니다.");
-								} else
-							out.println("일치하는 비밀번호가 아닙니다.");
-							} else
-								out.println("member_study 테이블에 일치하는 아이디가 없습니다.");
-						} catch (SQLException ex) {
-							out.println("SQLExceptino: " + ex.getMessage());
-						} finally {
-							if (rs != null)
-								rs.close();
-							if (pstmt != null)
-								pstmt.close();
-							if (conn != null)
-								conn.close();
-						}
-						%>
-
 						<div class="row">
 							<div class="col-10">
 								<ul class="nav nav-pills mt-2" style="font-size: 15px;">
